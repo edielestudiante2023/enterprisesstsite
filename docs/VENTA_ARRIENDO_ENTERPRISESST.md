@@ -210,7 +210,7 @@ El sitio nuevo no parte de cero: reutiliza lo que ya funciona en `C:\xampp\htdoc
 - Tablas creadas con migraciones de CodeIgniter **idempotentes** (lección del 2 de noviembre de 2026), aplicadas siempre con un script PHP CLI del repositorio: primero en local y, solo si termina bien, en producción (regla de `D:\DESARROLLO\KEYS\sql.txt`). Nunca SQL manual.
 - Conexión `production` en el `.env` local para correr los scripts contra producción desde el equipo (en el servidor de PsyRisk el grupo `production` no existe; ver la memoria del proyecto).
 - **Estado al 21 de noviembre de 2026: base local creada y migrada.** Base `enterprisesstsite` en XAMPP con las tablas `roles`, `usuarios`, `password_resets`, `blog_posts` y `blog_visitas_snapshots` (misma estructura que en psyrisksite), más el rol `admin` (`php spark db:seed RolesSeeder`). Las 5 migraciones están en `app/Database/Migrations/2026-11-21-*` y usan `IF NOT EXISTS`: se comprobó que una segunda corrida no hace nada.
-- **Producción, pendiente:** cuando exista la base en el servidor, poner sus credenciales en el grupo `production` del `.env` local (ya está la plantilla comentada) y correr desde este equipo `php spark migrate -g production` y luego `php spark db:seed RolesSeeder` contra ese grupo. Sin SQL manual.
+- **Producción (nivelada el 22 de noviembre de 2026):** las 6 tablas existen en la base `enterprisesstsite` de DigitalOcean. **No usar `php spark migrate -g production`**: en CodeIgniter 4.7 ese `-g` no cambia la conexión y corre contra la base local (pasó el 22 de noviembre; se corrigió con `tools/limpiar_migraciones_falsas_local.php`). Antes: cuando exista la base en el servidor, poner sus credenciales en el grupo `production` del `.env` local (ya está la plantilla comentada) y correr desde este equipo `php spark db:migrate-production` y luego `php spark db:seed RolesSeeder` contra ese grupo. Sin SQL manual.
 
 ### Blog (el componente más importante para el SEO)
 | Pieza | En psyrisksite | Para qué sirve |
@@ -313,7 +313,7 @@ Buenas prácticas y SEO en 100. Cambios:
 
 **Pendiente para producción (fase 4)**
 1. Confirmar que la marca blanca de Codex está desplegada en el aplicativo.
-2. Crear la base `enterprisesstsite` en el servidor de bases de datos, poner sus credenciales en el grupo `production` del `.env` local y correr `php spark migrate -g production` y el seeder de roles.
+2. Crear la base `enterprisesstsite` en el servidor de bases de datos, poner sus credenciales en el grupo `production` del `.env` local y correr `php spark db:migrate-production` y el seeder de roles.
 3. Crear el dominio y el SSL en aaPanel; repositorio de GitHub y flujo `cycloid → main`.
 4. `.env` del servidor: `CI_ENVIRONMENT = production`, `app.baseURL = 'https://enterprisesst.cycloidtalent.com/'`, base de datos, y para recuperar contraseñas `email.fromEmail`, `email.fromName` y `email.SMTPPass` (SendGrid).
 5. Crear el administrador real con `php spark admin:crear` y la tarea programada del snapshot.

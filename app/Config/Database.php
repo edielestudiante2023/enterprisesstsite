@@ -158,6 +158,42 @@ class Database extends Config
     //    ];
 
     /**
+     * Producción (DigitalOcean), para correr desde el equipo local:
+     *   php spark migrate -g production
+     * Los valores vienen de database.production.* en el .env local. Sin esta propiedad,
+     * CodeIgniter ignora esas variables y el comando corre contra la base local
+     * (incidente del 22 de noviembre de 2026). En el servidor, el grupo default ya es producción.
+     *
+     * @var array<string, mixed>
+     */
+    public array $production = [
+        'DSN'          => '',
+        'hostname'     => '',
+        'username'     => '',
+        'password'     => '',
+        'database'     => '',
+        'DBDriver'     => 'MySQLi',
+        'DBPrefix'     => '',
+        'pConnect'     => false,
+        'DBDebug'      => true,
+        'charset'      => 'utf8mb4',
+        'DBCollat'     => 'utf8mb4_general_ci',
+        'swapPre'      => '',
+        'encrypt'      => true,
+        'compress'     => false,
+        'strictOn'     => false,
+        'failover'     => [],
+        'port'         => 25060,
+        'numberNative' => false,
+        'foundRows'    => false,
+        'dateFormat'   => [
+            'date'     => 'Y-m-d',
+            'datetime' => 'Y-m-d H:i:s',
+            'time'     => 'H:i:s',
+        ],
+    ];
+
+    /**
      * This database connection is used when running PHPUnit database tests.
      *
      * @var array<string, mixed>
