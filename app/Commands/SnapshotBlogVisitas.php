@@ -14,7 +14,7 @@ use DateTimeZone;
  *
  * Cron de produccion (viernes 8:00 a. m. en Bogota):
  *   CRON_TZ=America/Bogota
- *   0 8 * * 5 cd /www/wwwroot/enterprisesstsite && php spark blog:snapshot-visitas
+ *   0 8 * * 5 cd /www/wwwroot/enterprisesst && php spark blog:snapshot-visitas
  */
 class SnapshotBlogVisitas extends BaseCommand
 {

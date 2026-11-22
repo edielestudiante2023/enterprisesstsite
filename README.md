@@ -25,4 +25,4 @@ php -d extension=sqlite3 vendor/bin/phpunit -c phpunit.dist.xml --no-coverage
 
 ## Despliegue
 
-Rama de trabajo `cycloid`; el servidor sirve `main`. Mezclar `cycloid` en `main`, `git push origin main` y `git pull origin main` en `/www/wwwroot/enterprisesstsite`. La raíz web del servidor es la carpeta `public/`.
+Rama de trabajo `cycloid`; el servidor sirve `main`. Mezclar `cycloid` en `main`, `git push origin main` y `git pull origin main` en `/www/wwwroot/enterprisesst`. La raíz web del servidor es la carpeta `public/`.

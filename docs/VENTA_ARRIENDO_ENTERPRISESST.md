@@ -311,7 +311,16 @@ Buenas prácticas y SEO en 100. Cambios:
 - `php tools/generar_marca.php`: regenera las versiones del logo.
 - `php tools/limpiar_blog_local.php --confirmar`: vacía el blog de la base local después de pruebas.
 
-**Pendiente para producción (fase 4)**
+**Producción (22 de noviembre de 2026): sitio en línea en https://enterprisesst.cycloidtalent.com**
+- Repositorio: https://github.com/edielestudiante2023/enterprisesstsite (ramas `main`, que sirve el servidor, y `cycloid`, de trabajo).
+- Servidor: carpeta **`/www/wwwroot/enterprisesst`** (así la creó aaPanel), raíz web `public/`, Apache. Git ignora los permisos (`core.fileMode false`) y los archivos de aaPanel (`.git/info/exclude`).
+- `.env` del servidor (root:www, 640): `CI_ENVIRONMENT = production`, base de DigitalOcean como grupo `default` y SendGrid de la misma cuenta de psyrisksite, con remitente "EnterpriseSST".
+- Base `enterprisesstsite` (DigitalOcean) nivelada con `php spark db:migrate-production` desde el equipo local, y rol `admin` creado.
+- Tarea programada: `0 8 * * 5 cd /www/wwwroot/enterprisesst && php spark blog:snapshot-visitas` (respaldo del crontab: `/root/crontab.bak-20261122`).
+- Verificado en vivo: todas las páginas, 404 real, `.env` bloqueado (403), compresión gzip, caché de un año en CSS, JS y fuentes, CSP, HSTS y demás encabezados.
+- Despliegue: `cycloid` → `main` → `git push origin main` → en el servidor `cd /www/wwwroot/enterprisesst && git pull origin main`.
+
+**Pendiente (fase 4)**
 1. Confirmar que la marca blanca de Codex está desplegada en el aplicativo.
 2. Crear la base `enterprisesstsite` en el servidor de bases de datos, poner sus credenciales en el grupo `production` del `.env` local y correr `php spark db:migrate-production` y el seeder de roles.
 3. Crear el dominio y el SSL en aaPanel; repositorio de GitHub y flujo `cycloid → main`.
