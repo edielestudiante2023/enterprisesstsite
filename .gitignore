@@ -84,7 +84,8 @@ php_errors.log
 #-------------------------
 # Composer
 #-------------------------
-vendor/
+# Solo las dependencias de Composer de la raíz; public/assets/vendor (Quill, DataTables) sí va en Git.
+/vendor/
 
 #-------------------------
 # IDE / Development Files
