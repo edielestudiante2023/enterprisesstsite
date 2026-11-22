@@ -320,6 +320,14 @@ Buenas prácticas y SEO en 100. Cambios:
 - Verificado en vivo: todas las páginas, 404 real, `.env` bloqueado (403), compresión gzip, caché de un año en CSS, JS y fuentes, CSP, HSTS y demás encabezados.
 - Despliegue: `cycloid` → `main` → `git push origin main` → en el servidor `cd /www/wwwroot/enterprisesst && git pull origin main`.
 
+**Lanzamiento (22 de noviembre de 2026)**
+- Marca blanca del aplicativo desplegada en producción (`dashboard.cycloidtalent.com`, commit `663182cd`); correos de contacto de las firmas confirmados (GESSEG `contacto@gessegcolombia.com`, Liliana `lilianapenna.sst@gmail.com`).
+- Sitemap enviado a Search Console (propiedad de dominio `cycloidtalent.com`) e indexación solicitada para inicio, precios, funciones y para firmas consultoras: Google reporta "La página se puede indexar".
+- La página de Cycloid `/servicios/software-sg-sst` presenta EnterpriseSST y lleva al sitio (`utm_source=cycloidtalent`); `SEO_OBJETIVO.md` actualizado.
+- El informe `psyrisksite/tools/seo_ventas.php` ya incluye inicio, precios y funciones del sitio.
+- Administrador del panel: edison.cuervo@cycloidtalent.com.
+- **Pendiente:** recorrido visual de la marca blanca (firma de prueba y Cycloid); redes sociales con la diseñadora (nombre EnterpriseSST, usuario `enterprisesst`, foto `public/assets/img/marca/icono-512.png`, enlaces con `utm_source=<red>&utm_medium=social&utm_campaign=perfil`); primeros artículos del blog.
+
 **Pendiente (fase 4)**
 1. Confirmar que la marca blanca de Codex está desplegada en el aplicativo.
 2. Crear la base `enterprisesstsite` en el servidor de bases de datos, poner sus credenciales en el grupo `production` del `.env` local y correr `php spark db:migrate-production` y el seeder de roles.
