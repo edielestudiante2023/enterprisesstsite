@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# El panel y el ingreso llevan noindex (metadato y encabezado X-Robots-Tag);
+# no se bloquean aquí para que los buscadores puedan leer esa instrucción.
+
+Sitemap: https://enterprisesst.cycloidtalent.com/sitemap.xml

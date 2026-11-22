@@ -1,0 +1,27 @@
+# EnterpriseSST
+
+> EnterpriseSST es un software para gestionar el Sistema de Gestión de Seguridad y Salud en el Trabajo (SG-SST) en Colombia. Es una marca de Cycloid Talent SAS, que lo usa con sus propios clientes y lo arrienda a firmas consultoras SST, consultores independientes y empresas con área SST propia. Lema: "Sistemas que evolucionan".
+
+## Qué hace
+- Documentos SG-SST con IA: 75 tipos de documento (políticas, programas, procedimientos, actas, planes) redactados con el contexto de cada cliente y aprobados por el consultor.
+- Evaluación de estándares mínimos (Decreto 1072 de 2015, Resolución 0312 de 2019) y plan de trabajo anual por ciclo PHVA.
+- Matriz IPEVR (GTC 45), matriz legal, matriz de EPP, profesiograma y perfiles de cargo.
+- Inspecciones desde el celular, comités con votación electrónica, 17 indicadores SST, firma electrónica con verificación pública, portal del cliente y el asistente Otto.
+- Cada firma trabaja en un espacio aislado y con su propia marca.
+
+## Precio
+Mensualidad por cada empresa cliente activa, según sus estándares mínimos y número de trabajadores (tarifas en https://enterprisesst.cycloidtalent.com/precios). Sin cobro por consultor ni por usuario, sin cláusulas de permanencia. Demo guiada, sin prueba gratis.
+
+## Páginas
+- Inicio: https://enterprisesst.cycloidtalent.com/
+- Funciones: https://enterprisesst.cycloidtalent.com/funciones
+- Precios: https://enterprisesst.cycloidtalent.com/precios
+- Cómo funciona el arriendo: https://enterprisesst.cycloidtalent.com/como-funciona
+- Para firmas consultoras: https://enterprisesst.cycloidtalent.com/para-firmas-consultoras
+- Para consultores independientes: https://enterprisesst.cycloidtalent.com/para-consultores-independientes
+- Para empresas con área SST: https://enterprisesst.cycloidtalent.com/para-empresas
+- Preguntas frecuentes: https://enterprisesst.cycloidtalent.com/preguntas-frecuentes
+- Blog: https://enterprisesst.cycloidtalent.com/blog
+
+## Contacto
+Diana Cuestas, Directora Comercial de Cycloid Talent · diana.cuestas@cycloidtalent.com · +57 311 7919191 · Solicitudes de demo: https://cycloidtalent.com/contacto?servicio=Plataforma%20EnterpriseSST
