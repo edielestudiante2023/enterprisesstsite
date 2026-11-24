@@ -31,6 +31,19 @@ class Sitio extends BaseConfig
     public string $contactoWhatsapp = '573117919191';
     public string $contactoLinkedin = 'https://www.linkedin.com/in/diana-patricia-cuestas-183024399/';
 
+    /**
+     * Redes sociales oficiales de EnterpriseSST (24 de noviembre de 2026).
+     *
+     * @var array<string, string>
+     */
+    public array $redes = [
+        'Facebook'  => 'https://www.facebook.com/profile.php?id=61596825214488',
+        'Instagram' => 'https://www.instagram.com/enterprisesst.oficial/',
+        'LinkedIn'  => 'https://www.linkedin.com/company/enterprisesst/',
+        'YouTube'   => 'https://www.youtube.com/@enterprisesst.oficial',
+        'TikTok'    => 'https://www.tiktok.com/@enterprisesst_oficial',
+    ];
+
     /** Dirección de Cycloid Talent (la misma que publica psyrisksite). */
     public string $direccion = 'Tv. 24B #17-209, Soacha, Cundinamarca, Colombia';
 

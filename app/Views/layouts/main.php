@@ -36,6 +36,7 @@ $organizacionLd = [
         'slogan' => $sitio->lema,
         'logo'  => base_url('assets/img/marca/logo-enterprisesst.png'),
         'url'   => base_url('/'),
+        'sameAs' => array_values($sitio->redes),
     ],
     'address' => [
         '@type'           => 'PostalAddress',

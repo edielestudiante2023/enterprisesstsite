@@ -310,6 +310,9 @@ section { padding: 72px 0; }
 .footer-grid ul { list-style: none; margin: 0; padding: 0; }
 .footer-grid li { margin-bottom: 8px; }
 .footer-logo { width: 190px; margin-bottom: 12px; }
+.footer-redes { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.footer-redes a { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: #262e42; color: #d8dce6; transition: background .2s, color .2s; }
+.footer-redes a:hover { background: var(--dorado); color: #141a29; }
 .footer-legal { border-top: 1px solid #262e42; margin-top: 36px; padding-top: 20px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: .85rem; }
 @media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 520px) { .footer-grid { grid-template-columns: 1fr; } }
