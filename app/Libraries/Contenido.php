@@ -141,7 +141,7 @@ class Contenido
             'image'               => base_url('assets/img/marca/og-enterprisesst.png'),
             'description'         => 'Software para gestionar el SG-SST de varias empresas: documentos con IA, estándares mínimos de la Resolución 0312, inspecciones desde el celular, comités con votación electrónica, indicadores y firma electrónica.',
             'inLanguage'          => 'es-CO',
-            'publisher'           => ['@id' => base_url('/') . '#organizacion'],
+            'publisher'           => ['@id' => config('Sitio')->empresaUrl . '#organizacion'],
         ];
     }
 }

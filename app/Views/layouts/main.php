@@ -26,7 +26,7 @@ $gaId     = (string) (env('GA_MEASUREMENT_ID') ?: '');
 $organizacionLd = [
     '@context' => 'https://schema.org',
     '@type'    => 'Organization',
-    '@id'      => base_url('/') . '#organizacion',
+    '@id'      => config('Sitio')->empresaUrl . '#organizacion',
     'name'     => 'Cycloid Talent',
     'legalName' => 'Cycloid Talent SAS',
     'url'      => $sitio->empresaUrl,
@@ -58,10 +58,12 @@ $sitioLd = [
     '@context'   => 'https://schema.org',
     '@type'      => 'WebSite',
     '@id'        => base_url('/') . '#sitio',
-    'name'       => $sitio->marca,
-    'url'        => base_url('/'),
-    'inLanguage' => 'es-CO',
-    'publisher'  => ['@id' => base_url('/') . '#organizacion'],
+    // Nombre del sitio en Google: sin esto mostraba "Cycloid Talent" (el dominio principal).
+    'name'          => $sitio->marca,
+    'alternateName' => ['Enterprise SST', 'EnterpriseSST Software SG-SST'],
+    'url'           => base_url('/'),
+    'inLanguage'    => 'es-CO',
+    'publisher'  => ['@id' => config('Sitio')->empresaUrl . '#organizacion'],
 ];
 ?>
 <!DOCTYPE html>

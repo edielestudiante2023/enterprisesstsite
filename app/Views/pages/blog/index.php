@@ -10,7 +10,7 @@
     '@type'     => 'Blog',
     'name'      => 'Blog de EnterpriseSST',
     'url'       => base_url('blog'),
-    'publisher' => ['@id' => base_url('/') . '#organizacion'],
+    'publisher' => ['@id' => config('Sitio')->empresaUrl . '#organizacion'],
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?></script>
 <?= $this->endSection() ?>
 
